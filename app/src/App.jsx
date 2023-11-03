@@ -1,24 +1,44 @@
 import styled from "styled-components";
 
 const App = () => {
-  return <MainContainer>
+  return <Container>
     <TopContainer>
       <div className="logo">
         <img src="/Foody Zone.png" alt="logo"/>
       </div>
 
       <div className="search">
-        <input placeholder="search Food"/>
+        <input placeholder="search Food"></input>
       </div>
     </TopContainer>
-  </MainContainer>
+  </Container>
 };
 
 export default App;
 
 
-const MainContainer = styled.div`
+const Container = styled.div`
+max-width: 1200px;
+margin: 0 auto;
 
-background-color: #323334;
 `;
-const TopContainer = styled.section``;
+const TopContainer = styled.section`
+min-height: 140px;
+display:flex;
+justify-content: space-between;
+padding:16px;
+align-items: center;
+
+.search{
+  input{
+    background-color: transparent;
+    border:1px solid red;
+    color:white;
+    border-radius: 5px;
+    height: 40px;
+    font-size: 16px;
+    padding: 4px;
+  }
+}
+
+`;
