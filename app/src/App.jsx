@@ -1,6 +1,7 @@
 import {useState} from "react"
 import {useEffect} from "react";
 import styled from "styled-components";
+import SearchResult from "./components/SearchResult/SearchResult";
 
 const BASE_URL = "http://localhost:9000";
 
@@ -25,6 +26,8 @@ useEffect(() => {
   fetchFoodData();
 },[]);
 
+console.log(data);
+
 if(error) return <div>{error}</div>;
 if (loading) return <div>loading.....</div>;
 
@@ -46,11 +49,7 @@ if (loading) return <div>loading.....</div>;
       <Button>Dinner</Button>
     </FilterContainer>
 
-    <FoodCardContainer>
-      <FoodCards>
-
-      </FoodCards>
-    </FoodCardContainer>
+    <SearchResult data={data}/>
 
 
 
@@ -101,10 +100,3 @@ const Button = styled.button`
 `;
 
 
-const FoodCardContainer = styled.section`
-height:calc(100vh - 150px);
- background-image: url("/bg.png");
- background-size: cover;
- width:100%;
-`;
-const FoodCards = styled.div``;
