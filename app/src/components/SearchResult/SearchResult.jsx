@@ -1,3 +1,4 @@
+import { BASE_URL } from "../../App";
 import styled from "styled-components";
 
 const SearchResult = ({data}) => {
@@ -6,7 +7,17 @@ const SearchResult = ({data}) => {
       <FoodCards>
 
         { data?.map((food)=> (
-            <FoodCard key={food.name}>{food.text}</FoodCard>
+            <FoodCard key={food.name}>
+                <div className="food_image">
+                    <img src={BASE_URL + food.image}/>
+                 </div>
+                 <div className="food_info">
+                    <div className="info">
+                        <h3>{food.name}</h3>
+                        <p>{food.text}</p>
+                    </div>
+                 </div>
+            </FoodCard>
           ) ) }
       </FoodCards>
     </FoodCardContainer>

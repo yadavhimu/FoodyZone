@@ -3,7 +3,7 @@ import {useEffect} from "react";
 import styled from "styled-components";
 import SearchResult from "./components/SearchResult/SearchResult";
 
-const BASE_URL = "http://localhost:9000";
+export const BASE_URL = "http://localhost:9000";
 
 const App = () => {
 
