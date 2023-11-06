@@ -1,4 +1,4 @@
-import { BASE_URL } from "../../App";
+import { BASE_URL, Button } from "../../App";
 import styled from "styled-components";
 
 const SearchResult = ({data}) => {
@@ -6,16 +6,17 @@ const SearchResult = ({data}) => {
     <FoodCardContainer>
       <FoodCards>
 
-        { data?.map((food)=> (
-            <FoodCard key={food.name}>
+        { data?.map(({ name, image, text, price})=> (
+            <FoodCard key={name}>
                 <div className="food_image">
-                    <img src={BASE_URL + food.image}/>
+                    <img src={BASE_URL + image}/>
                  </div>
                  <div className="food_info">
                     <div className="info">
-                        <h3>{food.name}</h3>
-                        <p>{food.text}</p>
+                        <h3>{name}</h3>
+                        <p>{text}</p>
                     </div>
+                    <Button>${price.toFixed(2)}</Button>
                  </div>
             </FoodCard>
           ) ) }
