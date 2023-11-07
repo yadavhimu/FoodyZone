@@ -36,4 +36,7 @@ height:calc(100vh - 150px);
 `;
 const FoodCards = styled.div``;
 
-const FoodCard = styled.div``;
+const FoodCard = styled.div`
+
+
+`;
