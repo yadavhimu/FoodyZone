@@ -11,6 +11,7 @@ const [data, setData] = useState(null);
 const [filteredData, setFilteredData] = useState(null);
 const [loading, setLoading]=useState(false);
 const [error, setError] = useState(null);
+const [selectedBtn, setSelectedBtn] = useState("all")
 
 useEffect(() => {
   const fetchFoodData = async () => {
@@ -114,6 +115,10 @@ export const Button = styled.button`
   padding:6px 12px;
   border:none;
   color:white;
+  cursor:pointer;
+  &:hover {
+    background-color: #f22f2f;
+  }
 `;
 
 
