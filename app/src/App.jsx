@@ -143,7 +143,7 @@ const TopContainer = styled.section`
 
   @media (0 < width < 600px) {
     flex-direction: column;
-    height: 120px;
+    height: 100px;
   }
 `;
 
