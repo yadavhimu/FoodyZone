@@ -40,7 +40,7 @@ const FoodCards = styled.div`
   display: flex;
   flex-wrap: wrap;
   row-gap: 32px;
-  column-gap: 20px;
+  column-gap: 22px;
   justify-content: center;
   align-items: center;
   padding-top: 80px;
